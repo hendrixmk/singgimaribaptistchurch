@@ -378,7 +378,7 @@ li.dropdown {
 		left: -1.25rem;   /* Moves it 10px to the right */
 	  }
 	  nav img {
-		width: 50px;
+		width: 60px;
 		height: auto;
 		cursor: pointer;
 		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
