@@ -22,10 +22,10 @@
 <body>
 	<!-- Header Section -->
 	<section class="header">
-	  <nav>
+	  <nav class="navbar">
 		<a href="#"><img src="Images/logo.png" alt="Logo"></a>
 		<div class="nav-links" id="navLinks">
-		  <i class="fa fa-times" onclick="hideMenu()"></i>
+		  <i class="fa fa-arrow-left" onclick="hideMenu()"></i>
 		  <ul>
 			<li><a href="#">HOME</a></li>
 			<li class="dropdown">
@@ -46,13 +46,29 @@
 			  </div>
 			</li>
 			<li><a href="#events">EVENTS</a></li>
-			<li><a href="signin.html">SIGN-IN</a></li>
 		  </ul>
 		</div>
 		<i class="fa fa-bars" onclick="showMenu()"></i>
 	  </nav>
+	  <div class="carousel">
+		<img src="Images/slideshow1.png" alt="Slide 1">
+		<img src="Images/slideshow2.jpg" alt="Slide 2">
+		<img src="Images/slideshow3.webp" alt="Slide 3">
+	</div>
+
+	<!-- Slideshow Buttons/Indicators -->
+	<div class="carousel-controls">
+		<button class="control-btn" onclick="changeSlide(0)"></button>
+		<button class="control-btn" onclick="changeSlide(1)"></button>
+		<button class="control-btn" onclick="changeSlide(2)"></button>
+	</div>
 	  <div class="text-box">
-		<h1>A·chik Singgimari Church</h1>
+		<h1><h1>
+			<span class="a">A</span><span>·</span><span>c</span><span>h</span><span>i</span><span>k</span>
+			<span>S</span><span>i</span><span>n</span><span>g</span><span>g</span><span>i</span><span>m</span><span>a</span><span>r</span><span>i</span>
+			<span>C</span><span>h</span><span>u</span><span>r</span><span>c</span><span>h</span>
+		  </h1>
+		  </h1>
 		<p>
 		  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		  <br>
@@ -244,14 +260,8 @@
 		  </div>
 		</footer>
 	  </div>
-	  
-	  <!-- Scripts 
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
-	  -->
-	  <!-- JavaScript for Toggle Menu-->
-	  <script src ="js/toggle.js" defer></script>
-	  <script src ="js/sripts.js" defer></script>
+
+	  <script src ="js/scripts.js" defer></script>
 	  </body>
 	  </html>
 	  
