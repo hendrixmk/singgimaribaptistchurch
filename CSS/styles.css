@@ -91,11 +91,11 @@ nav img {
 	cursor: pointer;
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	box-shadow: 0 6px 8px rgba(8, 1, 1, 0.25);
-	border-radius: 30px;
-	border: 3px solid #001a8cfc;
-	border-top: 25px solid #ffffff6d;	
-	border-top-left-radius: /30px;
-	border-top-right-radius: 30px;
+	border-radius: 53px;
+	border: 3px solid #f8f008b0;
+	border-top: 25px solid #ffe100dd;	
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
 	margin-top: -55px;
 	position: fixed; 
 	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -123,7 +123,7 @@ nav img:hover {
 	padding: 2px 12px;
 	position: relative;
 	top: -1px;
-	right: 185%;
+	right: 230%;
 }
 .nav-links ul li a {
 	color: white;
@@ -201,9 +201,79 @@ li.dropdown {
   }
   .text-box p{
 	font-size: 1.0rem;
-	color: #3b3d405b;
+	color: #ffffff;
 	font-family: sans-serif;
-	text-shadow: 2px 4px 8px rgba(250, 142, 10, 0.375); /* Soft shadow */
+	text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.375); /* Soft shadow */
+  }
+  /* Hero Button */
+  .hero-btn {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--primary-color);
+	border: 1px solid var(--text-color);
+	padding: 12px 34px;
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.375);
+	background:#ce8e1678;
+	cursor: pointer;
+	position: relative;
+	margin-top: 35px;
+  }
+  .hero-btn:hover {
+	background: var(--primary-color);
+	border: 1px solid var(--text-color);
+	transition: 0.7s;
+  }
+  @media (max-width: 700px){
+	.text-box {
+		width: 90%;
+		color: var(--text-color);
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 1.5s ease-in-out forwards;
+	  }
+	.text-box h1 {
+		font-size: 40px;
+		margin-bottom: 35px;
+		display: inline-block;
+		opacity: 0;
+		color: white;
+		transform: translateY(20px);
+		animation: slideUp 1s ease-out 0.5s forwards;
+		cursor: pointer; /* Pointer on hover */
+		text-shadow: 2px 2px 1px rgba(35, 31, 31, 0.68); /* Soft shadow */
+	  }
+	  .text-box p{
+		font-size: 1.0rem;
+		color: #ffffff;
+		font-family: sans-serif;
+		text-shadow: 1px 1px 1px rgb(0, 0, 0); /* Soft shadow */
+	  }
+	  /* Hero Button */
+  	.hero-btn {
+		display: inline-block;
+		text-decoration: none;
+		color: var(--text-color);
+		border: 1px solid var(--text-color);
+		padding: 12px 34px;
+		font-size: 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		background: transparent;
+		cursor: pointer;
+		position: relative;
+		margin-top: 30px;
+		transform: translateY(150px);
+ 	 }
+ 	 .hero-btn:hover {	
+		background: var(--primary-color);
+		border: 1px solid var(--text-color);
+		transition: 0.7s;
+  		}
   }
   /* Split Letters for Different Effects */
   .text-box h1 span {
@@ -328,27 +398,7 @@ li.dropdown {
 	100% {
 	  transform: translateY(-8px) rotate(5deg);
 	}
-  }
-  
-  /* Hero Button */
-  .hero-btn {
-	display: inline-block;
-	text-decoration: none;
-	color: var(--text-color);
-	border: 1px solid var(--text-color);
-	padding: 12px 34px;
-	font-size: 13px;
-	background: transparent;
-	cursor: pointer;
-	position: relative;
-	margin-top: 35px;
-  }
-  .hero-btn:hover {
-	background: red;
-	border: 1px solid var(--text-color);
-	transition: 0.7s;
-  }
-  
+  } 
   /* Mobile Navigation */
   nav .fa {
 	display: none;
@@ -360,7 +410,7 @@ li.dropdown {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 1.2rem;
+		height: 1.5rem;
 		background-color: var(--primary-color);
 		z-index: 1000;
 		transition: background-color 0.3s ease;
@@ -382,11 +432,11 @@ li.dropdown {
 		height: auto;
 		cursor: pointer;
 		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-		box-shadow: 0 6px 8px rgba(8, 1, 1, 0.25);
-		border-radius: 15px;
-		border: 2px solid #c2860f80;
-		border-top: 25px solid #ffffffb5;
-		margin-top: -35px;
+		box-shadow: 0 4px 6px rgba(96, 95, 93, 0.713);
+		border-radius: 28px;
+		border: 0.5px solid #ffb300b6;
+		border-top: 20px solid #cebb16;
+		margin-top: -38px;
 	}
 	nav img:hover {
 		transform: scale(1.1);
@@ -409,7 +459,7 @@ li.dropdown {
 	}
   
 	.nav-links ul {
-		padding: 5rem;
+		padding: 5.2rem;
 		border-top: 1px solid #ccc; /* Line above each <ul> */
 	  }
   
