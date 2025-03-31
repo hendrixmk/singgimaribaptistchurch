@@ -2,7 +2,7 @@
 :root {
 	--primary-color: #023E8A;
 	--secondary-color: #0096C7;
-	--accent-color: #ADE8F4;
+	--accent-color: #36b0dcb1;
 	--text-color: #fff;
 	--font-family: 'Josefin Sans', sans-serif;
   }
@@ -18,75 +18,120 @@
   .header {
 	min-height: 100vh;
 	width: 100%;
-	/* Background gradient with animation */
-	background: linear-gradient(315deg, rgba(101,0,94,1) 3%, rgba(60,132,206,1) 38%, rgba(48,238,226,1) 68%, rgba(255,25,25,1) 98%);
-	background-size: 400% 400%;
-	background-attachment: fixed;
-	animation: gradient 15s ease infinite;
 	position: relative;
 	margin: auto;
-	overflow: auto;
-  }
-  
-  @keyframes gradient {
-	0% { background-position: 0% 0%; }
-	50% { background-position: 100% 100%; }
-	100% { background-position: 0% 0%; }
-  }
-  
-  /* Wave Animation */
-  .wave {
-	background: rgb(255 255 255 / 25%);
-	border-radius: 1000% 1000% 0 0;
-	position: fixed;
-	width: 200%;
-	height: 12em;
-	animation: wave 10s -3s linear infinite;
-	transform: translate3d(0, 0, 0);
-	opacity: 0.8;
-	bottom: 0;
+	overflow: hidden;
+	box-shadow: 0 3px 8px rgba(8, 1, 1, 0.25);
+}
+
+/* Carousel Container */
+.carousel {
+	position: absolute;
+	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	z-index: -1;
-  }
-  .wave:nth-of-type(2) {
-	bottom: -1.25em;
-	animation: wave 18s linear reverse infinite;
-	opacity: 0.8;
-  }
-  .wave:nth-of-type(3) {
-	bottom: -2.5em;
-	animation: wave 20s -1s reverse infinite;
-	opacity: 0.9;
-  }
-  @keyframes wave {
-	2% { transform: translateX(1px); }
-	25% { transform: translateX(-25%); }
-	50% { transform: translateX(-50%); }
-	75% { transform: translateX(-25%); }
-	100% { transform: translateX(1px); }
-  }
-  
-  /* Navigation */
-  nav {
+}
+
+/* Individual Slide */
+.carousel img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
+}
+
+/* Show first image initially */
+.carousel img:first-child {
+	opacity: 1;
+}
+
+/* Navigation Buttons */
+.carousel-controls {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
 	display: flex;
-	padding: 2% 6%;
+	gap: 10px;
+	z-index: 2;
+}
+
+/* Style for buttons or dots */
+.carousel-controls button {
+	width: 12px;
+	height: 12px;
+	background-color: #ccc;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.carousel-controls button.active {
+	background-color: #007bff; /* Active button color */
+}
+
+/* Navigation */
+nav {
+	display: flex;
+	padding: 2% 4%;
 	justify-content: space-between;
 	align-items: center;
-  }
-  nav img { width: 90px; }
-  .nav-links { flex: 1; text-align: right; }
-  .nav-links ul li {
+}
+nav img {
+	width: 100px;
+	height: auto;
+	cursor: pointer;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	box-shadow: 0 6px 8px rgba(8, 1, 1, 0.25);
+	border-radius: 30px;
+	border: 3px solid #001a8cfc;
+	border-top: 25px solid #ffffff6d;	
+	border-top-left-radius: /30px;
+	border-top-right-radius: 30px;
+	margin-top: -55px;
+	position: fixed; 
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+nav img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Fixed Navbar with Primary Color */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0	;
+	background-color: var(--primary-color);
+	z-index: 1000;
+	transition: background-color 0.3s ease;
+	}  
+/* Navigation Links */
+.nav-links ul li {
 	list-style: none;
 	display: inline-block;
 	padding: 2px 12px;
 	position: relative;
-  }
-  .nav-links ul li a {
-	color: var(--text-color);
+	top: -1px;
+	right: 185%;
+}
+.nav-links ul li a {
+	color: white;
 	text-decoration: none;
-	font-size: 13px;
-  }
-  .nav-links ul li::after {
+	font-size: 14px;
+	text-shadow: 2px 4px 4px rgba(72, 72, 72, 0.715); /* Soft shadow */
+}
+.nav-links ul li::after {
 	content: '';
 	width: 0%;
 	height: 2px;
@@ -94,37 +139,43 @@
 	display: block;
 	margin: auto;
 	transition: 0.3s;
-  }
-  .nav-links ul li:hover::after { width: 100%; }
-  
-  /* Dropdown */
-  li.dropdown { display: inline-block; }
-  .dropdown-content {
+}
+.nav-links ul li:hover::after {
+	width: 100%;
+}
+
+/* Dropdown */
+li.dropdown {
+	display: inline-block;
+}
+.dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: var(--primary-color);
+	background-color: #e6960dc0;
 	min-width: 160px;
 	border-radius: 2px;
 	z-index: 1;
 	margin-top: 2%;
-  }
-  .dropdown-content a {
-	color: black;
+}
+.dropdown-content a {
+	color: rgb(1, 2, 3);
 	font-size: 15px;
 	padding: 12px 10px;
 	text-decoration: none;
 	display: block;
 	text-align: left;
 	transition: 1s;
-  }
-  .dropdown-content a:hover {
-	background-color: #48CAE4;
+}
+.dropdown-content a:hover {
+	background-color: var(--accent-color);
 	padding: 8px 8px;
-  }
-  .dropdown:hover .dropdown-content { display: block; }
-  
-  /* Text Box */
-  .text-box {
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Text Box */
+.text-box {
 	width: 90%;
 	color: var(--text-color);
 	position: absolute;
@@ -132,12 +183,151 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	opacity: 0;
+	animation: fadeIn 1.5s ease-in-out forwards;
   }
-  .text-box h1 { font-size: 62px; }
-  .text-box p {
-	margin: 10px 0 40px;
-	font-size: 14px;
-	color: whitesmoke;
+  
+  /* Text Animation for h1 */
+  .text-box h1 {
+	font-size: 70px;
+	margin-bottom: 30px;
+	display: inline-block;
+	opacity: 0;
+	color: white;
+	transform: translateY(20px);
+	animation: slideUp 1s ease-out 0.5s forwards;
+	cursor: pointer; /* Pointer on hover */
+	text-shadow: 1px 1px 1px rgba(35, 31, 31, 0.342); /* Soft shadow */
+  }
+  .text-box p{
+	font-size: 1.0rem;
+	color: #3b3d405b;
+	font-family: sans-serif;
+	text-shadow: 2px 4px 8px rgba(250, 142, 10, 0.375); /* Soft shadow */
+  }
+  /* Split Letters for Different Effects */
+  .text-box h1 span {
+	display: inline-block;
+	transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+	cursor: grab; /* Hand cursor */
+  }
+  
+  /* Apply Unique Animations on Hover */
+  .text-box h1:hover span:nth-child(6n+1) {
+	animation: bounce 0.6s ease-in-out infinite alternate;
+	cursor: grab; /* Grab on animation */
+  }
+  .text-box h1:hover span:nth-child(6n+2) {
+	animation: flip 0.6s ease-in-out infinite alternate;
+	cursor: grab;
+  }
+  .text-box h1:hover span:nth-child(6n+3) {
+	animation: pulse 0.6s ease-in-out infinite alternate;
+	cursor: grab;
+  }
+  .text-box h1:hover span:nth-child(6n+4) {
+	animation: skew 0.6s ease-in-out infinite alternate;
+	cursor: grab;
+  }
+  .text-box h1:hover span:nth-child(6n+5) {
+	animation: zoom 0.6s ease-in-out infinite alternate;
+	cursor: grab;
+  }
+  .text-box h1:hover span:nth-child(6n) {
+	animation: float 0.6s ease-in-out infinite alternate;
+	cursor: grab;
+  }
+  
+  /* Hover: Change Color and Pointer */
+  .text-box h1:hover {
+	cursor: pointer; /* Pointer for entire heading */
+  }
+  .text-box h1:hover span {
+	color: #ffbe33; /* Vibrant orange on hover */
+	cursor: grab; /* Hand/grab cursor while animating */
+  }
+  
+  /* Keyframes for Main Animations */
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	  transform: translate(-50%, -55%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(-50%, -50%);
+	}
+  }
+  
+  @keyframes slideUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* Bounce Effect */
+  @keyframes bounce {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateY(-10px);
+	}
+  }
+  
+  /* Flip Effect */
+  @keyframes flip {
+	0% {
+	  transform: rotateY(0deg);
+	}
+	100% {
+	  transform: rotateY(180deg);
+	}
+  }
+  
+  /* Pulse Effect */
+  @keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.1);
+	}
+  }
+  
+  /* Skew Effect */
+  @keyframes skew {
+	0% {
+	  transform: skew(0deg, 0deg);
+	}
+	100% {
+	  transform: skew(10deg, -10deg);
+	}
+  }
+  
+  /* Zoom Effect */
+  @keyframes zoom {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.3);
+	}
+  }
+  
+  /* Float Effect */
+  @keyframes float {
+	0% {
+	  transform: translateY(0);
+	}
+	100% {
+	  transform: translateY(-8px) rotate(5deg);
+	}
   }
   
   /* Hero Button */
@@ -151,6 +341,7 @@
 	background: transparent;
 	cursor: pointer;
 	position: relative;
+	margin-top: 35px;
   }
   .hero-btn:hover {
 	background: red;
@@ -159,31 +350,75 @@
   }
   
   /* Mobile Navigation */
-  nav .fa { display: none; }
+  nav .fa {
+	display: none;
+  }
+  
   @media (max-width: 700px) {
-	.text-box h1 { font-size: 25px; }
-	.nav-links ul li { display: block; }
-	.nav-links {
-	  position: absolute;
-	  background: #6495ED;
-	  height: 100vh;
-	  width: 200px;
-	  top: 0;
-	  right: -200px;
-	  text-align: left;
-	  z-index: 2;
-	  transition: 1s;
-	}
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 1.2rem;
+		background-color: var(--primary-color);
+		z-index: 1000;
+		transition: background-color 0.3s ease;
+		}  
 	nav .fa {
 	  display: block;
 	  color: var(--text-color);
-	  margin: 10px;
-	  font-size: 22px;
+	  margin: 0.625rem;
+      font-size: 1.275rem;
 	  cursor: pointer;
+	  z-index: 3; /* Ensure it stays above other elements */
 	}
-	.nav-links ul { padding: 30px; }
-  }
+	.fa-bars {
+		position: relative;
+		left: -1.25rem;   /* Moves it 10px to the right */
+	  }
+	  nav img {
+		width: 50px;
+		height: auto;
+		cursor: pointer;
+		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		box-shadow: 0 6px 8px rgba(8, 1, 1, 0.25);
+		border-radius: 15px;
+		border: 2px solid #c2860f80;
+		border-top: 25px solid #ffffffb5;
+		margin-top: -35px;
+	}
+	nav img:hover {
+		transform: scale(1.1);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	}
+	.nav-links {
+	  position: absolute;
+	  background: #0e172a;
+	  height: 100vh;
+	  width: 200px;
+	  top: 0;
+	  right: -200px; /* Initially hidden */
+	  text-align: left;
+	  z-index: 1000;
+	  transition: right 0.5s ease; /* Smooth slide-in effect */
+	}
   
+	.nav-links.active {
+	  right: 0; /* Slide in when active */
+	}
+  
+	.nav-links ul {
+		padding: 5rem;
+		border-top: 1px solid #ccc; /* Line above each <ul> */
+	  }
+  
+	.nav-links ul li {
+	  display: block;
+	  margin: 15px 0;
+	  top: -60px
+	}
+  }
   /* DESCRIPTION */
   .description {
 	width: 80%;
