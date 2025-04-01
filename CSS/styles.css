@@ -576,7 +576,7 @@ li.dropdown {
 	margin-left: 2rem;
   }
   .description p{
-	text-shadow: justify;
+	text-align: justify;
   }
 }
   /* CAMPUS */
@@ -650,7 +650,7 @@ li.dropdown {
 		overflow: hidden;
 	  }
 	  .campus p {
-		text-align: center;
+		text-align: justify;
 		font-size: 15px;
 		margin-bottom: 15%;
 		margin-top: 5%;
