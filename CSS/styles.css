@@ -575,6 +575,9 @@ li.dropdown {
 	margin-block-start: -2rem;
 	margin-left: 2rem;
   }
+  .description p{
+	text-shadow: justify;
+  }
 }
   /* CAMPUS */
   .campus {
