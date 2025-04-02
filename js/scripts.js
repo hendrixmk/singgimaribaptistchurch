@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===========================
   // Mobile Menu Toggle (Unified)
   // ===========================
-  // Adjust the ID as needed. Here, we assume the sliding menu uses "navLinks".
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("navLinks");
   if (menuToggle && navLinks) {
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Slide-out menu controls using Font Awesome icons
   const faBars = document.querySelector(".fa-bars");
   const faTimes = document.querySelector(".fa-arrow-left");
   if (faBars && navLinks) {
@@ -45,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
   let interval;
 
-  // Show slide based on index
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.style.opacity = i === index ? '1' : '0';
@@ -56,27 +53,47 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = index;
   }
 
-  // Change to next slide automatically
   function showNextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
   }
 
-  // Manual slide change (make it global so HTML onclick works)
   window.changeSlide = function (index) {
-    clearInterval(interval); // Stop auto-slide on manual click
+    clearInterval(interval);
     showSlide(index);
-    startAutoSlide(); // Restart auto-slide after manual change
+    startAutoSlide();
   };
 
-  // Start auto-slide
   function startAutoSlide() {
-    interval = setInterval(showNextSlide, 5000); // Slide every 5 seconds
+    interval = setInterval(showNextSlide, 5000);
   }
 
-  // Initialize carousel if slides exist
   if (slides.length > 0) {
     showSlide(currentIndex);
     startAutoSlide();
   }
+
+  // ===========================
+  // Equal Heights Script
+  // ===========================
+  (function(){
+    $.fn.fitHeights = function() {
+      var items = $(this);
+      function setHeights() {
+        var currentTallest = 0;
+        items.css({ 'min-height' : currentTallest });
+        items.each(function(){
+          if( $(this).height() > currentTallest ) { currentTallest = $(this).height(); }
+        });
+        items.css({ 'min-height' : currentTallest });
+      }
+      setHeights();
+      $(window).on('resize', setHeights);
+      return this;
+    };
+  })(jQuery);
+
+  $(window).on("load", function(){
+    $('.grid-testimonials p').fitHeights();
+  });
 });
