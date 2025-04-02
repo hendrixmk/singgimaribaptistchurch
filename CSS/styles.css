@@ -86,7 +86,7 @@ nav {
 	align-items: center;
 }
 nav img {
-	width: 8.5rem;
+	width: 6.5rem;
 	height: auto;
 	cursor: pointer;
 	border-top:  23px solid #0240eaee;	
@@ -118,7 +118,7 @@ nav img:hover {
 	padding: 2px 12px;
 	position: relative;
 	top: -1px;
-	right: 217%;
+	right: 222%;
 }
 .nav-links ul li a {
 	color: white;
@@ -489,6 +489,10 @@ li.dropdown {
 	margin-left: 9rem;
 	justify-content: space-between;
   }
+  .row p{
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.427)
+  }
   .description-col {
 	flex-basis: 35%;
 	margin-right: 6%;
@@ -508,6 +512,7 @@ li.dropdown {
 	text-align: center;
 	font-weight: 600;
 	margin: 10px;
+	color: solid var(--text-color);
   }
   .description-col:hover {
 	box-shadow: 0 0 10px 0 solid var(--primary-color);
@@ -595,11 +600,18 @@ li.dropdown {
 	position: relative;
 	overflow: hidden;
   }
+  .campus h1{
+	font-size: 4rem;
+	margin-top: 2rem;
+	color: #656262;
+  }
   .campus p {
+	width: 70%;
 	text-align: center;
 	font-size: 15px;
 	margin-bottom: 5%;
 	margin-top: 2%;
+	padding-left: 15rem;
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgb(136, 127, 127);
   }
@@ -644,18 +656,27 @@ li.dropdown {
 		width: 150%;
 		flex-basis: 32%;
 		border-radius: 5px;
-		margin-bottom: 30px;
+		margin-bottom: 18px;
 		margin-right: 85%;
 		position: relative;
 		overflow: hidden;
 	  }
+	  .campus h1{
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	  }
 	  .campus p {
+		width: 100%;
 		text-align: justify;
+		padding-left: 0;
 		font-size: 15px;
 		margin-bottom: 15%;
 		margin-top: 5%;
 		font-family: Arial, Helvetica, sans-serif;
 		color: rgb(136, 127, 127);
+	  }
+	  .campus-col img{
+		margin-bottom: -2rem;
 	  }
  }
   
@@ -930,4 +951,91 @@ li.dropdown {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: var(--text-color);
   }
-  
+  /* iPad Portrait (768px) */
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    padding: 2% 4%;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Moves links to the left */
+    padding: 0;
+	margin-left: 8.5rem;
+  }
+
+  .nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: static;
+  }
+
+  .nav-links ul li a {
+    font-size: 13px;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav img {
+    width: 4.5rem;
+    height: auto;
+    cursor: pointer;
+    border-top: 23px solid #0240eaee;
+    margin-top: -55px;
+    left: 3rem;
+    position: fixed;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    filter: drop-shadow(0 6px 10px rgba(35, 35, 35, 0.852));
+  }
+  .row {
+    flex-direction: column; /* Stack elements vertically for better fit */
+    align-items: center;
+    margin-left: 0; /* Remove large left margin */
+    margin-top: 3%;
+  }
+
+  .description-col {
+    flex-basis: 100%; /* Full width to avoid squeezing */
+    margin-right: 0;
+    margin-bottom: 3%;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .campus {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	margin-bottom: 100px;
+  }
+  .campus-col {
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	margin-right: 0;
+	position: relative;
+	overflow: hidden;
+  }
+  .campus p{
+	width: 100%;
+	text-align: justify;
+	padding-left: 0;
+  }
+  .campus-col img{
+	margin-bottom: -2rem;
+  }
+}
+

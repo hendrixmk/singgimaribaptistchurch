@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===========================
   // Navbar Shrinking on Scroll
   // ===========================
-  window.onscroll = function () {
+ /* window.onscroll = function () {
     var navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
       navbar.classList.add('shrink-navbar');
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navbar.classList.remove('shrink-navbar');
     }
   };
-
+*/
   // ===========================
   // Mobile Menu Toggle (Unified)
   // ===========================
