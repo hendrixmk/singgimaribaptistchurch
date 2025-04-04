@@ -110,7 +110,7 @@
 		  </p>
 		</div>
 	  </div>
-	  <a href="welcome.php" class="hero-btn">Explore more</a>
+	  <button class="hero-btn" onclick="scrollToAbout()">Explore more</button>
 	  <hr>
 	</section>
   
@@ -323,6 +323,12 @@
 		</footer>
 	  </div>
 	  <script src ="js/scripts.js" defer></script>
+	  <script>
+		document.querySelector(".hero-btn").addEventListener("click", function (event) {
+			event.preventDefault();
+			document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
+		});
+	</script>
 	  </body>
 	  </html>
 	  
