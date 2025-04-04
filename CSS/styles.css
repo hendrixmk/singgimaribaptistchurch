@@ -527,7 +527,7 @@ li.dropdown {
 }
 .grid-testimonials-citation
 {
-  color: #656262;
+  color: var(--primary-color);
   display: block;
   font-size: 1.125em;
   font-weight: 700;
@@ -537,7 +537,7 @@ li.dropdown {
 }
 .grid-testimonials li div
 {
-  border: 10px solid #ebebeb;
+  border: 5px solid #ebebeb;
   padding: 2.125em 7.638888888888889%;
   position: relative
 }
@@ -567,52 +567,29 @@ li.dropdown {
 }
   
   /* BIBLE VERSES */
-  .verses {
-	width: 100%;
-	height: 25vh;
-	padding: 100px 0 20px;
-	background: linear-gradient(to bottom, #023E8A, #0096C7, #CAF0F8);
-	text-align: center;
+  .banner{
+	background:#B5C3D5;
+	height:280px;
   }
-  .verse-row {
-	margin-top: 2%;
-	display: flex;
-	justify-content: space-between;
-	padding: 2px;	
+  .banner h2{
+	height: 50px;
+	line-height:50px;
+	position:relative;
+	top:50px;
+	margin:0 auto;
+	text-align:center;
+	width:50%;
+	color: #023E8A;
   }
-  .verse-col {
-	flex-basis: 31%;
-	border-radius: 3%;
-	margin-bottom: 2%;
-	margin-top: -1%;
-  }
-  .hTwo {
-	margin-top: 0;
-	padding-top: -2vh;
-	font-size: 50px;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	background: -webkit-linear-gradient(#ddf0ad, #ffffffc5);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
-  .verses h3 {
-	margin-bottom: 2%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    font-style: inherit;
-    background: -webkit-linear-gradient(#ffffffa3, #91e6e1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 1px solid rgba(90, 90, 94, 0.398); /* Creates the underline */
-    display: inline-block;
-    padding-bottom: 5px; /* Adjust spacing */
-  }
-  .verses p {
-	margin-top: 0;
-	font-weight: 100;
-	color: #ffffffaa;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-size: 17px;
+  .banner h4{
+	height:50px;
+	line-height: 30px;
+	position:relative;
+	top:60px;
+	margin:0 auto;
+	text-align:center;
+	width:50%;
+	color: #000000;
   }
    /* DATA */
    .data {
@@ -1055,28 +1032,25 @@ li.dropdown {
 		font-size: 28px; /* Reduce font size for smaller screens */
 	}
 }
-@media (max-width: 700px) { 
-	@media (max-width: 768px) {
-		.hTwo {
-			font-size: 30px; /* Smaller font for mobile */
-			margin-top: -8vh;
-		}
-		.verses h3 {
-			font-size: 16px; /* Adjust heading size */
-		}
-		.verses p {
-			font-size: 14px;
-		}
-		.verse-row {
-			flex-direction: column; /* Stack elements vertically */
-			align-items: center;
-		}
-		.verse-col {
-			flex-basis: 90%;/* Take up most of the screen */
-			margin-top: 0;
-		}
+@media (max-width: 768px) {
+	.banner {
+		padding: 30px 10px;
+	}
+
+	.banner h2 {
+		font-size: 24px; /* Slightly smaller for mobile */
+		top: 10px; /* Reduce spacing */
+		width: 90%; /* Take up more space */
+	}
+
+	.banner h4 {
+		font-size: 16px; /* Smaller for mobile */
+		top: 25px;
+		width: 80%;
+		text-align: justify;
 	}
 }
+
 @media (max-width: 767px) {
 	.footer-dark{
 		margin-left: -2rem;
