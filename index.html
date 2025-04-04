@@ -47,7 +47,7 @@
 			  </div>
 			</li>
 			<li><a href="#events">EVENTS</a></li>
-			<li><a href="#events">ABOUT US</a></li>
+			<li><a href="#" class="scroll-link" data-target=".about">ABOUT US</a></li>
 		  </ul>
 		</div>
 		<i class="fa fa-bars" onclick="showMenu()"	></i>
@@ -74,7 +74,7 @@
 		<p>
 			A community of believers united by faith, love, and purpose. We guide souls toward salvation by living out the message of grace and truth.
 		</p>
-		<a href="#" class="hero-btn">Visit us to know more</a>
+		<a href="#" class="hero-btn" data-target=".about">Visit us to know more</a>
 	  </div>
 	</section>
   
@@ -324,10 +324,15 @@
 	  </div>
 	  <script src ="js/scripts.js" defer></script>
 	  <script>
-		document.querySelector(".hero-btn").addEventListener("click", function (event) {
-			event.preventDefault();
-			document.querySelector("#about").scrollIntoView({ behavior: "smooth" });
-		});
+		document.querySelectorAll("[data-target]").forEach(button => {
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.dataset.target);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
 	</script>
 	  </body>
 	  </html>
