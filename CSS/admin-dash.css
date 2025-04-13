@@ -1,0 +1,147 @@
+/* Admin Dashboard Layout */
+.admin-dashboard {
+  padding: 40px 20px;
+  background-color: #f1f3f5;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: 8vh;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  flex: 1 1 220px;
+  background: #e2e2e2;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-sidebar h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #222;
+}
+
+.dashboard-sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dashboard-sidebar li {
+  margin: 10px 0;
+}
+
+.dashboard-sidebar a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dashboard-sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.dashboard-content {
+  flex: 1 1 700px;
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #ccc;
+}
+
+.dashboard-content h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #444;
+}
+
+/* Cards */
+.dashboard-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  flex: 1 1 200px;
+  background: #f9f9f9;
+  border-left: 6px solid #007bff;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.dashboard-card:nth-child(2) {
+  border-left-color: #28a745;
+}
+.dashboard-card:nth-child(3) {
+  border-left-color: #ffc107;
+}
+
+.dashboard-card h4 {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.dashboard-card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Table */
+.dashboard-table {
+  overflow-x: auto;
+}
+
+.dashboard-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 500px;
+}
+
+.dashboard-table th, .dashboard-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.dashboard-table th {
+  background-color: #f2f2f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    flex-direction: column;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+  }
+
+  .dashboard-content, .dashboard-sidebar {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content h2 {
+    font-size: 18px;
+  }
+
+  .dashboard-card p {
+    font-size: 20px;
+  }
+
+  .dashboard-sidebar h3 {
+    font-size: 16px;
+  }
+}

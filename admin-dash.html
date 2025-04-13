@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Singgimari Baptist Church, Church, Ministries, Events, Christian Community">
+  <meta name="description" content="Welcome to Singgimari Baptist Church. Learn about our history, ministries, and upcoming events.">
+  <title>Singgimari Baptist Church - Home</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/admin-dash.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&family=Cabin&family=Baloo+Bhai+2&family=Quicksand:wght@300&family=Carattere&family=Cinzel:wght@400;500&family=Italianno&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600">
+</head>
+
+<body>
+	<!-- Header Section -->
+	<section class="header">
+	  <nav class="navbar">
+		<a href="#"><img src="Images/logo.png" alt="Logo"></a>
+		<div class="nav-links" id="navLinks">
+		  <i class="fa fa-arrow-left" onclick="hideMenu()"></i>
+		  <ul>
+			<li><a href="index.html">HOME</a></li>
+			<li class="dropdown">
+			  <a href="javascript:void(0)">MINISTRY-DEPARTMENTS</a>
+			  <div class="dropdown-content">
+				<a href="women-ministry.html">Women Ministry</a>
+				<a href="youth-ministry.html">Youth Ministry</a>
+				<a href="sunday-school.html">Education Minstry</a>
+				<a href="men-ministry.html">Men Ministry</a>
+			  </div>
+			</li>
+			<li><a href="#">GALLERY</a></li>
+			<li class="dropdown">
+			  <a href="javascript:void(0)">ADMINISTRATION</a>
+			  <div class="dropdown-content">
+				<a href="#">Executive Committee</a>
+				<a href="#">Projects &amp; Development</a>
+				<a href="#">Finance and Properties</a>
+			  </div>
+			</li>
+			<li><a href="#events">EVENTS</a></li>
+			<li><a href="#" class="scroll-link" data-target=".about">ABOUT US</a></li>
+		  </ul>
+		</div>
+		<i class="fa fa-bars" onclick="showMenu()"	></i>
+	  </nav>
+
+      <!-- Admin Dashboard Section -->
+<section class="admin-dashboard">
+    <div class="dashboard-wrapper">
+      
+      <!-- Sidebar -->
+      <aside class="dashboard-sidebar">
+        <h3>Admin Menu</h3>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Members</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </aside>
+  
+      <!-- Main Content -->
+      <main class="dashboard-content">
+        <h2>Welcome Admin</h2>
+  
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <h4>Total Members</h4>
+            <p>120</p>
+          </div>
+          <div class="dashboard-card">
+            <h4>Upcoming Events</h4>
+            <p>5</p>
+          </div>
+          <div class="dashboard-card">
+            <h4>Feedbacks</h4>
+            <p>24</p>
+          </div>
+        </div>
+  
+        <div class="dashboard-table">
+          <h4>Recent Activities</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>Logged In</td>
+                <td>13-Apr-2025</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mary Jane</td>
+                <td>Updated Event</td>
+                <td>12-Apr-2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </section>
+  
+	  <!-- FOOTER -->
+	  <div class="footer-dark">
+		<footer>
+		  <div class="container">
+			<div class="row">
+			  <div class="col-sm-6 col-md-3 item">
+				<h3>Pages</h3>
+				<ul>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Home</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Events</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Gallery</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> News</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Contact Us</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Feedback</a></li>
+				</ul>
+			  </div>
+			  <div class="col-sm-6 col-md-3 item">
+				<h3>Departments</h3>
+				<ul>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Women Ministry</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Youth Ministry</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Education Ministry</a></li>
+				</ul>
+			  </div>
+			  <div class="col-md-6 item text">
+				<h3>Administration</h3>
+				<ul>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Executive Committee</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Project and Development</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Finance and Properties</a></li>
+				  <li><a href="#"><i class="fa fa-chevron-right"></i> Statistics</a></li>
+				</ul>
+			  </div>
+			  <div>
+				<h3>Register as <i class="fa fa-user-o" aria-hidden="true"></i></h3>
+				<ul>
+				  <li><a href="admin_dash.php"><i class="fa fa-lock"></i> Admin</a></li>
+				  <li><a href="#"><i class="fa fa-briefcase"></i> Member</a></li>
+				  <li><a href="signin.html"><i class="fa fa-users"></i> User</a></li>
+				</ul>
+			  </div>
+			  <div class="social-btn">
+				<a href="#"><i class="fa fa-facebook-official"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-whatsapp"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+			  </div>
+			</div>
+			<div class="row">
+			  <p class="copyright">
+				Singgimari Baptist Church <i class="fa fa-copyright"></i> 2021
+			  </p>
+			</div>
+		  </div>
+		</footer>
+	  </div>
+    </body>
+    </html>
