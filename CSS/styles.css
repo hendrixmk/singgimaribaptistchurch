@@ -534,6 +534,13 @@ li.dropdown {
 }
 
 /* Contact Form */
+.sec2innercont{
+	background: #90E0FF;
+}
+.sec2addr p{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #140062d9;
+}
 .sec2contactform {
     margin-top: 20px;
     padding: 20px;
