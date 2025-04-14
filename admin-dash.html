@@ -61,13 +61,17 @@
       <!-- Sidebar -->
       <aside class="dashboard-sidebar">
         <h3>Admin Menu</h3>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Members</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">Settings</a></li>
-        </ul>
+		<ul>
+			<li><a href="#" data-page="dashboard">Dashboard</a></li>
+			<li><a href="#" data-page="members">Members</a></li>
+			<li><a href="#" data-page="events">Events</a></li>
+			<li><a href="#" data-page="reports">Reports</a></li>
+			<li><a href="#" data-page="contents">Contents</a></li>
+			<li><a href="#" data-page="gallery">Gallery</a></li>
+			<li><a href="#" data-page="settings">Settings</a></li>
+			<li><a href="#" data-page="exit">Exit</a></li>
+		  </ul>
+		  
       </aside>
   
       <!-- Main Content -->
@@ -103,13 +107,13 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td>John Doe</td>
+                <td>Hendrix Marak</td>
                 <td>Logged In</td>
                 <td>13-Apr-2025</td>
               </tr>
               <tr>
                 <td>2</td>
-                <td>Mary Jane</td>
+                <td>Marak Marak</td>
                 <td>Updated Event</td>
                 <td>12-Apr-2025</td>
               </tr>
@@ -118,6 +122,119 @@
         </div>
       </main>
     </div>
+  </section>
+
+<!--Member-->
+
+<template id="members-template">
+	<h2>Manage Members</h2>
+  
+	<button class="add-member" onclick="addMember()">Add Member</button>
+	<button class="add-member" onclick="addMember()">Authenticate</button>
+	<button class="add-member" onclick="addMember()">Access Controls</button>
+	<button class="add-member" onclick="addMember()">Member Analytics</button>
+	<div class="row">
+		<p class="info-txt">Please ensure that all member information—particularly names and contact numbers—is accurate and up to date, as this data is essential for secure registration and role-based access.
+			Kindly admit only verified individuals to preserve the integrity and trust of our church community.</p></div>
+	<table id="member-table">
+	  <thead>
+		<tr>
+		  <th>#</th>
+		  <th>Name</th>
+		  <th>Phone</th>
+		  <th>Role</th>
+		  <th>Actions</th>
+		</tr>
+	  </thead>
+	  <tbody class="member-info">
+		<tr>
+		  <td>1</td>
+		  <td>Jon Marak</td>
+		  <td class="phone">1234567899</td>
+		  <td class="role">Executive</td>
+		  <td>
+			<button onclick="viewMember(this)">View</button>
+			<button onclick="promoteMember(this)">Promote</button>
+			<button onclick="removeMember(this)">Delete</button>
+		  </td>
+		</tr>
+		<tr>
+		  <td>2</td>
+		  <td>Sam Sangma</td>
+		  <td class="phone">0987654321</td>
+		  <td class="role">Admin</td>
+		  <td>
+			<button onclick="viewMember(this)">View</button>
+			<button onclick="promoteMember(this)">Promote</button>
+			<button onclick="removeMember(this)">Delete</button>
+		  </td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jon Marak</td>
+			<td class="phone">1234567899</td>
+			<td class="role">Executive</td>
+			<td>
+			  <button onclick="viewMember(this)">View</button>
+			  <button onclick="promoteMember(this)">Promote</button>
+			  <button onclick="removeMember(this)">Delete</button>
+			</td>
+		  </tr>
+		  <tr>
+			<td>4</td>
+			<td>Sam Sangma</td>
+			<td class="phone">0987654321</td>
+			<td class="role">Admin</td>
+			<td>
+			  <button onclick="viewMember(this)">View</button>
+			  <button onclick="promoteMember(this)">Promote</button>
+			  <button onclick="removeMember(this)">Delete</button>
+			</td>
+			<tr>
+				<td>5</td>
+				<td>Jon Snow</td>
+				<td class="phone">1234567899</td>
+				<td class="role">Executive</td>
+				<td>
+				  <button onclick="viewMember(this)">View</button>
+				  <button onclick="promoteMember(this)">Promote</button>
+				  <button onclick="removeMember(this)">Delete</button>
+				</td>
+			  </tr>
+			  <tr>
+				<td>6</td>
+				<td>Tywin Arengh</td>
+				<td class="phone">0987654321</td>
+				<td class="role">Admin</td>
+				<td>
+				  <button onclick="viewMember(this)">View</button>
+				  <button onclick="promoteMember(this)">Promote</button>
+				  <button onclick="removeMember(this)">Delete</button>
+				</td>
+			  </tr>
+		  </tr>
+	  </tbody>
+	</table>
+  </template>
+
+  <!-- Add Member Form Modal -->
+<div id="add-member-modal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+	<div style="background:white; padding:20px; border-radius:10px; width:300px;">
+	  <h3>Add New Member</h3>
+	  <input type="text" id="first-name" placeholder="First Name" style="width:100%; margin-bottom:10px;" />
+	  <input type="text" id="last-name" placeholder="Last Name" style="width:100%; margin-bottom:10px;" />
+	  <input type="text" id="phone" placeholder="Phone Number" style="width:100%; margin-bottom:10px;" />
+	  <button onclick="submitMemberForm()" style="margin-right:10px;">Add</button>
+	  <button onclick="closeMemberForm()">Cancel</button>
+	</div>
+  </div>
+  <!---Bible Verse-->
+  <section class="banner">
+	<h2 class="hTwo">Galatians 5:1 <i class="fa fa-bookmark" aria-hidden="true"></i></h2>
+		<div>
+			<h4>"It is for freedom that Christ has set us free. Stand firm, then, and do not let yourselves be burdened again by a yoke of slavery."</h4>
+		</div>
+	</div>
   </section>
   
 	  <!-- FOOTER -->
@@ -176,5 +293,151 @@
 		  </div>
 		</footer>
 	  </div>
+	  <script>
+		const contentContainer = document.querySelector('.dashboard-content');
+		const sidebarLinks = document.querySelectorAll('.dashboard-sidebar a');
+	  
+		sidebarLinks.forEach(link => {
+		  link.addEventListener('click', (e) => {
+			e.preventDefault();
+			const page = link.getAttribute('data-page');
+	  
+			if (page === 'dashboard') {
+			  loadDashboard();
+			} else if (page === 'members') {
+			  loadMembers();
+			} else {
+			  contentContainer.innerHTML = `<h2>${page.charAt(0).toUpperCase() + page.slice(1)} Page</h2><p>Content coming soon...</p>`;
+			}
+		  });
+		});
+	  
+		function loadDashboard() {
+		  contentContainer.innerHTML = `
+			<h2>Welcome Admin</h2>
+			<div class="dashboard-cards">
+			  <div class="dashboard-card"><h4>Total Members</h4><p>120</p></div>
+			  <div class="dashboard-card"><h4>Upcoming Events</h4><p>5</p></div>
+			  <div class="dashboard-card"><h4>Feedbacks</h4><p>24</p></div>
+			</div>
+			<div class="dashboard-table">
+			  <h4>Recent Activities</h4>
+			  <table>
+				<thead>
+				  <tr><th>#</th><th>Name</th><th>Action</th><th>Date</th></tr>
+				</thead>
+				<tbody>
+				  <tr><td>1</td><td>Hendrix Marak</td><td>Logged In</td><td>13-Apr-2025</td></tr>
+				  <tr><td>2</td><td>Marak Marak</td><td>Updated Event</td><td>12-Apr-2025</td></tr>
+				</tbody>
+			  </table>
+			</div>
+		  `;
+		}
+	  
+		function loadMembers() {
+		  const template = document.getElementById('members-template');
+		  contentContainer.innerHTML = template.innerHTML;
+		}
+	  
+		function viewMember(button) {
+		  const row = button.closest("tr");
+		  const name = row.children[1].textContent;
+		  alert("Viewing details of " + name);
+		}
+	  
+		function promoteMember(button) {
+		  const row = button.closest("tr");
+		  const roleCell = row.querySelector(".role");
+		  if (roleCell.textContent.trim() === "Executive") {
+			roleCell.textContent = "Admin";
+			alert("Promoted to Admin");
+		  } else {
+			alert("Already an Admin");
+		  }
+		}
+	  
+		function removeMember(button) {
+		  const row = button.closest("tr");
+		  row.remove();
+		}
+	  
+		function addMember() {
+		  const table = document.querySelector("#member-table tbody");
+		  const rowCount = table.rows.length + 1;
+		  const newRow = document.createElement("tr");
+	  
+		  const name = `Member ${rowCount}`;
+	  
+		  newRow.innerHTML = `
+			<td>${rowCount}</td>
+			<td>${name}</td>
+			<td class="role">Executive</td>
+			<td>
+			  <button onclick="viewMember(this)">View</button>
+			  <button onclick="promoteMember(this)">Promote</button>
+			  <button onclick="removeMember(this)">Delete</button>
+			</td>
+		  `;
+	  
+		  table.appendChild(newRow);
+		}
+	  
+		// Load dashboard by default on page load
+		loadDashboard();
+	  </script>
+	  <script>
+	  function addMember() {
+  // Show modal form
+  document.getElementById('add-member-modal').style.display = 'flex';
+}
+
+function closeMemberForm() {
+  document.getElementById('add-member-modal').style.display = 'none';
+  document.getElementById('first-name').value = '';
+  document.getElementById('last-name').value = '';
+  document.getElementById('phone').value = '';
+}
+
+function submitMemberForm() {
+  const firstName = document.getElementById('first-name').value.trim();
+  const lastName = document.getElementById('last-name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if (!firstName || !lastName || !phone) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // Set fullName
+  const fullName = `${firstName} ${lastName}`;
+
+  // Create a new row in the member table
+  const table = document.querySelector("#member-table tbody");
+  const rowCount = table.rows.length + 1;
+  const newRow = document.createElement("tr");
+
+  newRow.innerHTML = `
+    <td>${rowCount}</td>
+    <td>${fullName}</td>
+    <td>${phone}</td> <!-- Display phone number -->
+    <td class="role">Executive</td>
+    <td>
+      <button onclick="viewMember(this)">View</button>
+      <button onclick="promoteMember(this)">Promote</button>
+      <button onclick="removeMember(this)">Delete</button>
+    </td>
+  `;
+
+  table.appendChild(newRow);
+  closeMemberForm();
+}
+
+// Function to close the form modal
+function closeMemberForm() {
+  document.getElementById('add-member-modal').style.display = 'none';
+}
+
+</script>
     </body>
     </html>
