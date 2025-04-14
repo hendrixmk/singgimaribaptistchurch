@@ -177,17 +177,35 @@
 #member-table button:hover {
   background-color: #cfcfcf;
 }
+
 /* Responsive */
+
 @media (max-width: 768px) {
   .dashboard-wrapper {
     flex-direction: column;
+    margin-left: -2vh;
   }
 
   .dashboard-cards {
     flex-direction: column;
+    width: 70%;
   }
 
   .dashboard-content, .dashboard-sidebar {
+    flex: 1 1 100%;
+  }
+
+  .add-member {
+    width: 90%;
+    text-align: center;
+  }
+
+  #member-table button {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .dashboard-card {
     flex: 1 1 100%;
   }
 }
@@ -203,5 +221,35 @@
 
   .dashboard-sidebar h3 {
     font-size: 16px;
+  }
+
+  #member-table th, #member-table td {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .dashboard-table {
+    overflow-x: auto;
+  }
+
+  .dashboard-cards {
+    gap: 10px;
+  }
+
+  .dashboard-card h4 {
+    font-size: 14px;
+  }
+
+  .dashboard-card p {
+    font-size: 18px;
+  }
+
+  .add-member {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .dashboard-sidebar ul li {
+    font-size: 14px;
   }
 }
