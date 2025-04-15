@@ -196,8 +196,9 @@
   }
 
   .add-member {
-    width: 90%;
-    text-align: center;
+    width: 40%;
+    font-size: 14px;
+    padding: 5px 10px;
   }
 
   #member-table button {
@@ -224,7 +225,7 @@
   }
 
   #member-table th, #member-table td {
-    padding: 8px 12px;
+    padding: 8px 8px;
     font-size: 13px;
   }
 
@@ -241,14 +242,24 @@
   }
 
   .dashboard-card p {
-    font-size: 18px;
+    font-size: 18px;                  
   }
 
   .add-member {
+    width: 40%;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 5px 10px;
+
   }
 
+  #member-table button {
+    width: 100%;
+    background: #023E8A;
+    color: rgba(255, 255, 255, 0.821);
+    padding: 5px 15px;
+    font-size: 13px;  
+  }
+  
   .dashboard-sidebar ul li {
     font-size: 14px;
   }
