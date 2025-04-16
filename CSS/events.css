@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('http://weloveiconfonts.com/api/?family=fontawesome');
+
+.wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+h1.section-title {
+    font-size: 3em;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1.section-title span {
+    background: #fff;
+    padding: 0 .5em;
+}
+
+h1.section-title:before {
+    border-top: 2px dashed #999;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+}
+
+.event-list-item {
+    background: #fafafa;
+    border: 1px solid rgba(0, 0, 0, .05);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+
+.event-list-item:nth-of-type(even) {
+    background: #F5F5F5;
+}
+
+.event-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.event-info-extras {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.25em;
+    padding: .3em 0;
+}
+
+.event-info-extras a {
+    text-decoration: none;
+}
+
+.event-info-extras .free:after {
+    content: "Free";
+    background: #5DBF0D;
+    color: #fff;
+    padding: .25em .5em;
+}
+
+.event-info-extras .iCal:after {
+    content: "\f073";
+    font-family: "Fontawesome";
+    font-size: 1.25em;
+    color: #0099A9;
+    margin: .25em .25em 0 0;
+}
+
+.event-info-extras .register:after {
+    content: "\f05a";
+    font-family: "Fontawesome";
+    font-size: 1.25em;
+    color: #0099A9;
+    margin: .25em .25em 0 0;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.event-start,
+.event-end {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-end:before {
+    content: "thru";
+    font-size: .5em;
+}
+
+.event-description {
+    flex-grow: 1;
+    padding: 1em;
+    max-width: 600px;
+}
+
+.event-header {
+    font-size: 1.5em;
+    margin-bottom: .25em;
+}
+
+.event-header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.event-title {
+    margin-bottom: .25em;
+}
+
+.event-location,
+.event-time {
+    font-size: .55em;
+}
+
+.event-location:before {
+    content: "\f041";
+    font-family: "Fontawesome";
+    margin-right: .35em;
+}
+
+.event-time:before {
+    content: "\f017";
+    font-family: "Fontawesome";
+    margin-right: .35em;
+}
+
+.event-excerpt {
+    font-size: .85em;
+}
+
+.event-excerpt a.more {
+    color: #248F8B;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.event-excerpt a.more:after {
+    content: "\f0a9";
+    font-family: "Fontawesome";
+    margin-left: .25em;
+}
+
+/* Featured Event */
+.event-list-item.featured {
+    color: #fff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.event-list-item.featured .event-info {
+    padding: 3em 2em;
+    position: relative;
+}
+
+.event-list-item.featured .event-description {
+    max-width: 600px;
+}
+
+.event-list-item.featured .event-header {
+    font-size: 2em;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    border-bottom: 4px double rgba(255, 255, 255, .5);
+}
+
+.event-list-item.featured .event-location,
+.event-list-item.featured .event-time {
+    font-size: .5em;
+}
+
+.event-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Category Colors */
+.event-list-item.gold .event-start,
+.event-list-item.gold .event-end {
+    background: #FFCC00 !important;
+}
+
+.event-list-item.navy .event-start,
+.event-list-item.navy .event-end {
+    background: #00205c !important;
+}
+
+.event-list-item.red .event-start,
+.event-list-item.red .event-end {
+    background: #B30000 !important;
+}
+
+.event-list-item.teal .event-start,
+.event-list-item.teal .event-end {
+    background: #248F8B !important;
+}

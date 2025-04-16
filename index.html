@@ -9,7 +9,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="CSS/styles.css">
-  
+  <link rel="stylesheet" href="CSS/events.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,135 +114,139 @@
 	  <button class="hero-btn" onclick="scrollToAbout()">Explore more</button>
 	  <hr>
 	</section>
-	<!--EVents-->
-	<div class="container">
-		<div class="section">
-		  <!-- Blog style taken from https://codepen.io/Michael-luke/pen/PzGywb?editors=1000 -->
-		  <div class="blog-post blog-single-post">
-			<div class="single-post-title">
-			  <h2>Title</h2>
+
+	<!-----------------------------------------EVents----------------------------------------------->
+
+	<div class="wrapper">
+
+		<h1 class="section-title"><span>Upcoming Events</span></h1>
+	
+		<!-- first item, not featured, no date range -->
+		<div class="event-list-item navy">
+			<div class="event-info">
+				<div class="event-info-extras">
+					<a href="#"><span class="iCal"></span></a>
+					<a href="#"><span class="register"></span></a>
+					<span class="free"></span>
+				</div>
+				<div class="event-date">
+					<p class="event-start">SEPT 20</p>
+				</div>
+				<div class="event-description">
+					<div class="event-header">
+						<a href="#"><h1 class="event-title">General Board Meeting</h1></a>
+						<p class="event-location">Mondoli Office</p>
+						<p class="event-time">12-3pm</p>
+					</div>
+					<div class="event-excerpt">
+						<p>We invite all board members to attend the upcoming General Board Meeting of Singgimari Baptist Church. This meeting will focus on key updates, upcoming programs, and important decisions for the church’s growth and ministry work. <a href="#" class="more">view event</a></p>
+					</div>
+				</div>
 			</div>
-			<div class="single-post-content">
-			  <table class="events-list">
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">16</div>
-					  <div class="event-month">MAR</div>
-					</div>
-				  </td>
-				  <td>
-					Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Siemens Arena</td>
-				  <td class="event-price hidden-xs">$50.00</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">5</div>
-					  <div class="event-month">APR</div>
-					</div>
-				  </td>
-				  <td>
-					Phasellus et est quis diam iaculis fringilla id nec sapien.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Nike Arena</td>
-				  <td class="event-price hidden-xs">FREE</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">31</div>
-					  <div class="event-month">MAY</div>
-					</div>
-				  </td>
-				  <td>
-					Ut consectetur commodo justo, sed sollicitudin massa venenatis ut 2013.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
-				  <td class="event-price hidden-xs">$30.00</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">17</div>
-					  <div class="event-month">SEP</div>
-					</div>
-				  </td>
-				  <td>
-					Pellentesque justo turpis, fringilla sit amet pulvinar ut, tincidunt nec leo.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
-				  <td class="event-price hidden-xs">FREE</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">16</div>
-					  <div class="event-month">MAR</div>
-					</div>
-				  </td>
-				  <td>
-					Donec hendrerit massa metus, a ultrices elit iaculis eu. Pellentesque ullamcorper augue lacus.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Siemens Arena</td>
-				  <td class="event-price hidden-xs">$50.00</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">5</div>
-					  <div class="event-month">APR</div>
-					</div>
-				  </td>
-				  <td>
-					Phasellus et est quis diam iaculis fringilla id nec sapien.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Nike Arena</td>
-				  <td class="event-price hidden-xs">FREE</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">31</div>
-					  <div class="event-month">MAY</div>
-					</div>
-				  </td>
-				  <td>
-					Ut consectetur commodo justo, sed sollicitudin massa venenatis ut 2013.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
-				  <td class="event-price hidden-xs">$30.00</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-				<tr>
-				  <td>
-					<div class="event-date">
-					  <div class="event-day">17</div>
-					  <div class="event-month">SEP</div>
-					</div>
-				  </td>
-				  <td>
-					Pellentesque justo turpis, fringilla sit amet pulvinar ut, tincidunt nec leo.
-				  </td>
-				  <td class="event-venue hidden-xs"><i class="icon-map-marker"></i> Samsung Arena</td>
-				  <td class="event-price hidden-xs">FREE</td>
-				  <td><a href="#" class="btn btn-grey btn-sm event-more">Read More</a></td>
-				</tr>
-			  </table>
-	  
-			</div>
-		  </div>
 		</div>
-	  </div>
-	  </div>
+	
+		<!-- second item, not featured, no date range -->
+		<div class="event-list-item teal">
+			<div class="event-info">
+				<div class="event-info-extras">
+					<a href="#"><span class="iCal"></span></a>
+				</div>
+				<div class="event-date">
+					<p class="event-start">SEPT 28</p>
+				</div>
+				<div class="event-description">
+					<div class="event-header">
+						<a href="#"><h1 class="event-title">Good Friday</h1></a>
+						<p class="event-location">Church</p>
+						<p class="event-time">12-3pm</p>
+					</div>
+					<div class="event-excerpt">
+						<p>Join us as we reflect on the sacrifice of Jesus Christ during our Good Friday service. This is a solemn day of remembrance, prayer, and gratitude for the love shown through the cross. Let us come together in worship and reverence as we prepare our hearts for Easter.<a href="#" class="more">view event</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- first featured item -->
+		<div class="event-list-item gold featured">
+			<div class="event-info">
+				<div class="event-info-extras">
+					<a href="#"><span class="iCal"></span></a>
+					<a href="#"><span class="register"></span></a>
+					<span class="free"></span>
+				</div>
+				<div class="event-date">
+					<p class="event-start">OCT 16</p>
+					<p class="event-end">OCT 17</p>
+				</div>
+				<div class="event-description">
+					<div class="event-header">
+						<a href="#"><h1 class="event-title">Chuttio Sastro'ko Skie ra'ani</h1></a>
+						<p class="event-location">Mondoli Gilja Nok</p>
+						<p class="event-time">12-3pm</p>
+					</div>
+					<div class="event-excerpt">
+						<p>Get ready for an exciting and faith-filled week at our Vacation Bible School! Children of all ages are welcome to join us for a time of Bible stories, songs, games, crafts, and fun activities centered around learning God’s Word.<a href="#" class="more">view event</a></p>
+					</div>
+				</div>
+			</div>
+			<img class="event-image" src="https://unsplash.it/750/300/?random" />
+		</div>
+	
+		<!-- second item, not featured, no date range -->
+		<div class="event-list-item navy">
+			<div class="event-info">
+				<div class="event-info-extras">
+					<a href="#"><span class="iCal"></span></a>
+				</div>
+				<div class="event-date">
+					<p class="event-start">NOV 20</p>
+				</div>
+				<div class="event-description">
+					<div class="event-header">
+						<a href="#"><h1 class="event-title">Easter Sunday</h1></a>
+						<p class="event-location">Mondoli Gilja Nok</p>
+						<p class="event-time">12-3pm</p>
+					</div>
+					<div class="event-excerpt">
+						<p>He is Risen! Celebrate the resurrection of our Lord and Savior Jesus Christ with us this Easter Sunday. It’s a day of joy, hope, and victory over the grave. Come and be part of our special worship service as we rejoice in the new life we have through Him. All are warmly welcome!<a href="#" class="more">view event</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- second item, not featured, with date range -->
+		<div class="event-list-item red">
+			<div class="event-info">
+				<div class="event-info-extras">
+					<a href="#"><span class="iCal"></span></a>
+					<a href="#"><span class="register"></span></a>
+					<span class="free"></span>
+				</div>
+				<div class="event-date">
+					<p class="event-start">DEC 10</p>
+					<p class="event-end">DEC 12</p>
+				</div>
+				<div class="event-description">
+					<div class="event-header">
+						<a href="#"><h1 class="event-title">Mission Prayer</h1></a>
+						<p class="event-location">Church Compound</p>
+						<p class="event-time">12-3pm</p>
+					</div>
+					<div class="event-excerpt">
+						<p>Join us in lifting up the work of missions through our dedicated Mission Prayer gatherings. We come together to pray for missionaries, mission fields, and the spread of the Gospel both near and far. It’s a time of intercession, encouragement, and unity as we stand in faith for God’s work around the world.
+							Everyone is welcome—let us partner in prayer and be part of God’s global mission!
+							
+							<a href="#" class="more">view event</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+
+
 	  <hr>
 	<div class="container">
 		<div class="innerwrap">
