@@ -74,7 +74,7 @@
 }
 
 .carousel-controls button.active {
-	background-color: #007bff; /* Active button color */
+	background-color: #ff4800; /* Active button color */
 }
 
 /* Navigation */
@@ -883,12 +883,13 @@ hr{
 	  position: absolute;
 	  background: #0e172a;
 	  height: 100vh;
-	  width: 200px;
+	  width: 50vw;
 	  top: 0;
-	  right: -200px; /* Initially hidden */
+	  right: -250px; /* Initially hidden */
 	  text-align: left;
 	  z-index: 1000;
 	  transition: right 0.5s ease; /* Smooth slide-in effect */
+	  border-left: 2px solid #141da1ba;
 	}
   
 	.nav-links.active {
@@ -896,14 +897,18 @@ hr{
 	}
   
 	.nav-links ul {
-		padding: 5.2rem;
-		border-top: 1px solid #ffffff; /* Line above each <ul> */
+		padding: 5rem;
+		margin-left: 1em;
+		border-top: 1px solid #c70505; /* Line above each <ul> */
 	  }
   
 	.nav-links ul li {
 	  display: block;
-	  margin: 15px 0;
+	  margin: 25px -4rem;
 	  top: -60px;
+	}
+	.nav-links ul li a {
+		color: rgb(255, 255, 255);
 	}
   }
  /* iPad Portrait (768px) */
