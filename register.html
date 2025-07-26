@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link rel="stylesheet" href="CSS/form_style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create Account</h2>
+    <form id="registerForm">
+      <input type="text" placeholder="Full Name" id="name" required />
+      <input type="email" placeholder="Email" id="email" required />
+      <input type="password" placeholder="Password" id="password" required />
+      <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+  <script src="js/auth.js"></script>
+  <script>
+ // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAOufyaZAQyIEpGeCWXrIgdeEXlbETQSj4",
+  authDomain: "singgimaribaptistchurch.firebaseapp.com",
+  projectId: "singgimaribaptistchurch",
+  storageBucket: "singgimaribaptistchurch.firebasestorage.app",
+  messagingSenderId: "827451578939",
+  appId: "1:827451578939:web:dff1e60fda105c994d9a1e",
+  measurementId: "G-LEL93T17DD"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
