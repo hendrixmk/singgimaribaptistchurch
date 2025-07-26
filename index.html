@@ -24,35 +24,43 @@
 	<!-- Header Section -->
 	<section class="header">
 	  <nav class="navbar">
-		<a href="/admin/login"><img src="Images/logo.png" alt="Logo" style="cursor: pointer;"></a>
-		<div class="nav-links" id="navLinks">
-		  <i class="fa fa-arrow-left" onclick="hideMenu()"></i>
-		  <ul>
-			<li><a href="#">HOME</a></li>
-			<li class="dropdown">
-			  <a href="javascript:void(0)">MINISTRY-DEPARTMENTS</a>
-			  <div class="dropdown-content">
-				<a href="women-ministry.html">Women Ministry</a>
-				<a href="youth-ministry.html">Youth Ministry</a>
-				<a href="sunday-school.html">Education Minstry</a>
-				<a href="men-ministry.html">Men Ministry</a>
-			  </div>
-			</li>
-			<li><a href="#">GALLERY</a></li>
-			<li class="dropdown">
-			  <a href="javascript:void(0)">ADMINISTRATION</a>
-			  <div class="dropdown-content">
-				<a href="#">Executive Committee</a>
-				<a href="#">Projects &amp; Development</a>
-				<a href="#">Finance and Properties</a>
-			  </div>
-			</li>
-			<li><a href="#events">EVENTS</a></li>
-			<li><a href="#" class="scroll-link" data-target=".about">ABOUT US</a></li>
-		  </ul>
-		</div>
-		<i class="fa fa-bars" onclick="showMenu()"	></i>
-	  </nav>
+  <!-- Logo with link -->
+  <a href="/admin/login">
+    <img src="Images/logo.png" alt="Logo" style="cursor: pointer;" />
+  </a>
+
+  <!-- Mobile Menu -->
+  <div class="nav-links" id="navLinks">
+    <i class="fa fa-arrow-left" onclick="hideMenu()"></i>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">MINISTRY-DEPARTMENTS</a>
+        <div class="dropdown-content">
+          <a href="women-ministry.html">Women Ministry</a>
+          <a href="youth-ministry.html">Youth Ministry</a>
+          <a href="sunday-school.html">Education Ministry</a>
+          <a href="men-ministry.html">Men Ministry</a>
+        </div>
+      </li>
+      <li><a href="#">GALLERY</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)">ADMINISTRATION</a>
+        <div class="dropdown-content">
+          <a href="#">Executive Committee</a>
+          <a href="#">Projects &amp; Development</a>
+          <a href="#">Finance and Properties</a>
+        </div>
+      </li>
+      <li><a href="#events">EVENTS</a></li>
+      <li><a href="#" class="scroll-link" data-target=".about">ABOUT US</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu Icon -->
+  <i class="fa fa-bars" onclick="showMenu()"></i>
+</nav>
+
 	  <div class="carousel">
 		<img src="Images/slideshow1.jpeg" alt="Slide 1">
 		<img src="Images/slideshow2.jpeg" alt="Slide 2">
